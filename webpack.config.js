@@ -33,11 +33,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              importLoaders: 1,
-              modules: {
-                localIdentName: '[name]__[local]__[contenthash:base64:5]',
-                auto: resourcePath => resourcePath.endsWith('.m.css'),
-              },
+              modules: true,
             },
           },
         ],
