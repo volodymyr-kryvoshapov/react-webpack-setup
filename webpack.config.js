@@ -2,15 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'index.js'),
+  entry: path.resolve('src', 'index.js'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve('dist'),
     filename: 'bundle.js',
   },
   devtool: 'eval-source-map',
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.resolve('dist'),
     },
     port: 9000,
   },
@@ -31,5 +31,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({ template: path.join(__dirname, 'src', 'index.html') })],
+  plugins: [new HtmlWebpackPlugin({
+    template: path.resolve('src', 'index.html'),
+  })],
 };
