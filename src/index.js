@@ -1,10 +1,10 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom/client';
 
-import './index.css'
+import styles from './index.css'
 
 const App = () => (
-  <div className="title">Hello World</div>
+  <div className={styles.title}>Hello World</div>
 );
 
 ReactDOM
